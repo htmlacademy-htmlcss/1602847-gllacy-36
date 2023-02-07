@@ -54,6 +54,11 @@ body {
     text-align: center;
 }
 
+.main-header button {
+    font-family: inherit;
+    color: inherit;
+}
+
 .main-header-phone {
     font-weight: 700;
     line-height: 20px;
@@ -83,10 +88,6 @@ body {
     font-family: inherit;
     color: inherit;
     font-weight: 700;
-    line-height: 20px;
-}
-
-.main-promo-cart-button {
     line-height: 20px;
 }
 
@@ -136,8 +137,11 @@ body {
 .main-heading {
     background-image: url("../images/main-heading-background.jpg");
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 16px;
+    min-height: 480px;
+    width: 1170px;
 }
 
 .main-heading-header {
@@ -145,6 +149,16 @@ body {
     font-size: 32px;
     line-height: 46px;
     text-align: center;
+}
+
+.main-article {
+    background-image: url("../images/article-background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    min-height: 224px;
+    width: 570px;
 }
 
 .main-article-header {
@@ -161,21 +175,30 @@ body {
 
 .main-newsletter-input {
     font-family: inherit;
+    color: #B9B9B9;
     line-height: 20px;
 }
 
 .submit {
+    font-family: inherit;
+    color: inherit;
     font-weight: 700;
     line-height: 20px;
 }
 
-/* Это надо развернуть, но случился затуп, ибо transform переворачивает всё и вся */
-/* Обернуть фон в див звучит колхозно. */
 .main-delivery {
     background-image: url("../images/delivery-background.jpg");
-    border-radius: 16px;
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 16px;
+    min-height: 534px;
+    width: 1170px;
+}
+
+.main-delivery input {
+    color: #B9B9B9;
+    font-family: inherit;
 }
 
 .main-delivery-header {
@@ -217,7 +240,11 @@ body {
 .main-contacts {
     background-image: url("../images/address.jpg");
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 16px;
+    min-height: 492px;
+    width: 1170px;
 }
 
 .main-contacts-address-subheader {
@@ -244,8 +271,9 @@ body {
     line-height: 20px;
 }
 
-/* Выглядит не очень, я бы переделал но не знаю как */
 .main-contacts-callback-button {
+    font-family: inherit;
+    color: inherit;
     font-weight: 700;
     line-height: 20px;
 }
@@ -282,6 +310,7 @@ body {
 
 .main-inner-catalog-filter-form .button {
     color: inherit;
+    font-family: inherit;
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
@@ -315,6 +344,7 @@ body {
     font-weight: 700;
     line-height: 20px;
     color: inherit;
+    font-family: inherit;
 }
 
 .main-inner-catalog-navigation-item {
