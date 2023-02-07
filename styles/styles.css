@@ -23,7 +23,16 @@
 }
 
 .visually-hidden {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 body {
@@ -38,7 +47,6 @@ body {
 
 /* Header styles start */
 .main-header-link a {
-
     line-height: 20px;
     color: inherit;
     text-decoration: none;
@@ -72,6 +80,7 @@ body {
 }
 
 .main-promo-cart-button {
+    font-family: inherit;
     color: inherit;
     font-weight: 700;
     line-height: 20px;
@@ -110,7 +119,6 @@ body {
 }
 
 .main-purchasables-header {
-    font-weight: 700;
     font-size: 20px;
     line-height: 24px;
 }
@@ -237,7 +245,7 @@ body {
 }
 
 /* Выглядит не очень, я бы переделал но не знаю как */
-.main-contacts-callback.button {
+.main-contacts-callback-button {
     font-weight: 700;
     line-height: 20px;
 }
