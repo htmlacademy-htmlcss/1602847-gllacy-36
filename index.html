@@ -23,16 +23,24 @@
           </ul>
         </nav>
       </div>
-      <div class="main-header-user-navigation">
-        <a href="tel:+78005558628" class="main-header-phone">+7 800 555-86-28</a>
-        <button class="main-header-search-button" type="button">
-          <span class="visually-hidden">Поиск</span>
-        </button>
-        <!-- Ниже докинем иконку стилями-->
-        <button class="main-header-login-button" type="button" >Вход</button>
-        <!-- А тут жсом будем писать кол-во товара -->
-        <button class="main-header-cart-button" type="button">2 товара</button>
-      </div>
+
+      <ul class="main-header-user-navigation">
+        <li class="navigation-item">
+          <a href="tel:+78005558628" class="main-header-phone">+7 800 555-86-28</a>
+        </li>
+        <li class="navigation-item">
+          <button class="main-header-search-button" type="button">
+            <span class="visually-hidden">Поиск</span>
+          </button>
+        </li>
+        <li class="navigation-item">
+          <button class="main-header-login-button" type="button" >Вход</button>
+        </li>
+        <li class="navigation-item">
+          <button class="main-header-cart-button" type="button">2 товара</button>
+        </li>
+      </ul>
+
     </header>
     <main class="main-container">
       <div class="page-container">
@@ -55,27 +63,31 @@
         </section>
         <section class="main-gift">
           <h2 class="main-gift-header">
-            Заказывайте мороженое и получайте подарки!
+            Заказывайте мороженое<br> и получайте подарки!
           </h2>
 
           <ul class="main-gift-banners">
             <li class="main-gift-banner">
-              <h3 class="main-gift-header">
-                Малинка даром!
-              </h3>
-              <p class="main-gift-subheader">
-                При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.
-              </p>
-              <a class="main-gift-button" href="#">Хочу подарок</a>
+              <div class="main-gift-wrapper">
+                <h3 class="main-gift-item-header">
+                  Малинка даром!
+                </h3>
+                <p class="main-gift-item-subheader">
+                  При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.
+                </p>
+                <a class="main-gift-button" href="#">Хочу подарок</a>
+              </div>
             </li>
             <li class="main-gift-banner">
-              <h3 class="main-gift-header">
-                Маршмеллоу даром!
-              </h3>
-              <p class="main-gift-subheader">
-                При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.
-              </p>
-              <a class="main-gift-button" href="#">Хочу подарок</a>
+              <div class="main-gift-wrapper">
+                <h3 class="main-gift-item-header">
+                  Маршмеллоу даром!
+                </h3>
+                <p class="main-gift-item-subheader">
+                  При покупке 2 кг пломбира добавим <br>в ваш заказ упаковку нежных зефирок совершенно бесплатно.
+                </p>
+                <a class="main-gift-button" href="#">Хочу подарок</a>
+              </div>
             </li>
           </ul>
         </section>
@@ -88,59 +100,78 @@
           <ul class="main-purchasables-list">
             <li class="main-purchasables-item">
               <img class="main-purchasables-image" src="images/icecreams/raspberry.jpg" width="168" height="168" alt="Наше малиновое мороженное">
-              <h3 class="main-purchasables-header">Малинка</h3>
-              <p class="main-purchasables-subheader">Сливочное мороженое с малиновым джемом</p>
-              <b class="main-purchasables-price">310 ₽/<span>кг</span></b>
-              <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
-              <button class="main-purchasables-button" type="button"></button>
+              <div class="main-purchasables-text-wrapper">
+                <h3 class="main-purchasables-header">Малинка</h3>
+                <p class="main-purchasables-subheader">Сливочное мороженое с малиновым джемом</p>
+              </div>
+              <div class="main-purchasables-purchase-wrapper">
+                <b class="main-purchasables-price">310 ₽/<span>кг</span></b>
+                <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
+                <button class="main-purchasables-button" type="button"></button>
+              </div>
             </li>
             <li class="main-purchasables-item">
               <img class="main-purchasables-image" src="images/icecreams/pistachio.jpg" width="168" height="168" alt="Наше фисташковое мороженное">
-              <h3 class="main-purchasables-header">Фисташка</h3>
-              <p class="main-purchasables-subheader">Фисташковый пломбир с кусочками шоколада</p>
-              <b class="main-purchasables-price">340 ₽/<span>кг</span></b>
-              <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
-              <button class="main-purchasables-button" type="button"></button>
+              <div class="main-purchasables-text-wrapper">
+                <h3 class="main-purchasables-header">Фисташка</h3>
+                <p class="main-purchasables-subheader">Фисташковый пломбир <br>с кусочками шоколада</p>
+              </div>
+              <div class="main-purchasables-purchase-wrapper">
+                <b class="main-purchasables-price">340 ₽/<span>кг</span></b>
+                <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
+                <button class="main-purchasables-button" type="button"></button>
+              </div>
             </li>
             <li class="main-purchasables-item">
               <img class="main-purchasables-image" src="images/icecreams/blackberry.jpg" width="168" height="168" alt="Наше черничное мороженное">
-              <h3 class="main-purchasables-header">Черника</h3>
-              <p class="main-purchasables-subheader">Крем-брюле с черничным джемом</p>
-              <b class="main-purchasables-price">330 ₽/<span>кг</span></b>
-              <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
-              <button class="main-purchasables-button" type="button"></button>
+              <div class="main-purchasables-text-wrapper">
+                <h3 class="main-purchasables-header">Черника</h3>
+                <p class="main-purchasables-subheader">Крем-брюле <br>с черничным джемом</p>
+              </div>
+              <div class="main-purchasables-purchase-wrapper">
+                <b class="main-purchasables-price">330 ₽/<span>кг</span></b>
+                <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
+                <button class="main-purchasables-button" type="button"></button>
+              </div>
             </li>
             <li class="main-purchasables-item">
               <img class="main-purchasables-image" src="images/icecreams/bubblegum.jpg" width="168" height="168" alt="Наше мороженное со вкусом жвачки">
-              <h3 class="main-purchasables-header">Бабл-гам</h3>
-              <p class="main-purchasables-subheader">Ванильный пломбир со сладкой посыпкой</p>
-              <b class="main-purchasables-price">320 ₽/<span>кг</span></b>
-              <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
-              <button class="main-purchasables-button" type="button"></button>
+              <div class="main-purchasables-text-wrapper">
+                <h3 class="main-purchasables-header">Бабл-гам</h3>
+                <p class="main-purchasables-subheader">Ванильный пломбир <br>со сладкой посыпкой</p>
+              </div>
+              <div class="main-purchasables-purchase-wrapper">
+                <b class="main-purchasables-price">320 ₽/<span>кг</span></b>
+                <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
+                <button class="main-purchasables-button" type="button"></button>
+              </div>
             </li>
           </ul>
         </section>
         <section class="main-heading">
-            <h2 class="main-heading-header">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
-            <ul class="main-heading-subheaders">
-              <li class="main-heading-subheaders-item">
-                <p class="main-heading-subheaders-text">Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</p>
-              </li>
-              <li class="main-heading-subheaders-item">
-                <p class="main-heading-subheaders-text">Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.</p>
-              </li>
-              <li class="main-heading-subheaders-item">
-                <p class="main-heading-subheaders-text">Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.</p>
-              </li>
-              <li class="main-heading-subheaders-item">
-                <p class="main-heading-subheaders-text">Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.</p>
-              </li>
-            </ul>
+            <div class="main-heading-wrapper">
+              <h2 class="main-heading-header">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
+              <ul class="main-heading-subheaders">
+                <li class="main-heading-subheaders-item">
+                  <p class="main-heading-subheaders-text">Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</p>
+                </li>
+                <li class="main-heading-subheaders-item">
+                  <p class="main-heading-subheaders-text">Закупка ингредиентов производится только у&nbsp;проверенных фермерских хозяйств, с которыми&nbsp;нас связывает долговременное сотрудничество.</p>
+                </li>
+                <li class="main-heading-subheaders-item">
+                  <p class="main-heading-subheaders-text">Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.</p>
+                </li>
+
+                <li class="main-heading-subheaders-item">
+                  <p class="main-heading-subheaders-text">Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.</p>
+                </li>
+              </ul>
+            </div>
         </section>
         <div class="article-newsletter-wrapper">
           <article class="main-article">
             <h2 class="main-article-header">Новое в нашем блоге</h2>
-            <a class="main-article-subheader" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+            <a class="main-article-subheader" href="#">10 способов сервировки <br>фруктовых щербетов <br>к столу</a>
           </article>
           <section class="main-newsletter">
             <h2 class="visually-hidden">Раздел о рассылке</h2>
@@ -165,7 +196,7 @@
               Доставка любимого мороженого на дом
             </h2>
             <p class="main-delivery-subheader">
-              Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!
+              Хочется полакомиться любимым десертом, <br>но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!
             </p>
           </div>
           <form class="main-delivery-form" action="https://echo.htmlacademy.ru/courses" method="post">
@@ -226,23 +257,22 @@
               Форма обратной связи
             </button>
           </div>
-
         </section>
       </div>
     </main>
     <footer class="main-footer">
         <ul class="main-footer-media-links">
-          <li class="main-footer-media-tg">
+          <li class="main-footer-media-item">
             <a href="https://t.me/htmlacademy">
               <span class="visually-hidden">Переходите в наш телеграм</span>
             </a>
           </li>
-          <li class="main-footer-media-vk">
+          <li class="main-footer-media-item">
             <a href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Переходите в нашу группу ВКонтакте</span>
             </a>
           </li>
-          <li class="main-footer-media-youtube">
+          <li class="main-footer-media-item">
             <a href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Переходите на наш ютуб-канал</span>
             </a>
