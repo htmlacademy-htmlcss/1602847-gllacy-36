@@ -613,6 +613,7 @@ body {
 .main-inner-sortby-filter, .main-inner-catalog-scroll-filter {
     display: flex;
     flex-direction: column;
+    margin-right: 24px;
 }
 
 .main-inner-catalog-filter-sortby-header, .main-inner-catalog-filter-scroll-label, .main-inner-catalog-filter-grease-header {
@@ -624,26 +625,27 @@ body {
     padding: 0;
     margin: 0;
     border: none;
-    background: rgba(252, 252, 252, 0.3);
-    border-radius: 18px;
 }
 
 .main-inner-catalog-filter-grease-list {
     display: flex;
     list-style-type: none;
+    background: rgba(252, 252, 252, 0.3);
+    border-radius: 18px;
     padding: 0;
     margin: 0;
 }
 
 .main-inner-catalog-filter-fillers{
     border: none;
-    background: rgba(252, 252, 252, 0.3);
-    border-radius: 18px;
+    margin-right: 24px;
 }
 
 .main-inner-catalog-filter-fillers-list {
     display: flex;
     list-style-type: none;
+    background: rgba(252, 252, 252, 0.3);
+    border-radius: 18px;
     padding: 0;
     margin: 0;
 }
