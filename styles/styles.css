@@ -69,11 +69,11 @@ body {
     flex-grow: 1;
 }
 
-.page-container section, .article-newsletter-wrapper {
+.main-container section, .article-newsletter-wrapper {
     margin-bottom: 80px;
 }
 
-.page-container section:last-child {
+.main-container section:last-child {
     margin-bottom: 0;
 }
 /* Header styles start */
@@ -83,6 +83,10 @@ body {
     width: 1170px;
     align-items: center;
 }
+
+/* .header-logo {
+
+} */
 
 .main-header-navblock-wrapper {
     width: 575px;
@@ -313,7 +317,7 @@ body {
 .main-heading-subheaders {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -555,12 +559,20 @@ body {
 
 /* Main catalog content block start */
 
+.main-inner-breadcrumbs {
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+
 .main-inner-subnavigation-list {
     list-style: none;
     display: flex;
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 .main-inner-subnavigation-item a {
@@ -577,16 +589,63 @@ body {
     font-weight: 900;
     font-size: 32px;
     line-height: 46px;
+    padding: 0;
+    margin: 0;
 }
 
-
+.main-inner-catalog-filter {
+    margin-top: 40px
+}
 
 .main-inner-catalog-filter-form {
     display: flex;
-    width: 823px;
+    max-width: 823px;
+    flex-wrap: wrap;
     color: inherit;
     font-size: 14px;
     line-height: 20px;
+}
+
+.main-inner-sortby-input, .main-inner-catalog-scroll-input {
+    min-height: 36px;
+    border-radius: 20px;
+}
+.main-inner-sortby-filter, .main-inner-catalog-scroll-filter {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-inner-catalog-filter-sortby-header, .main-inner-catalog-filter-scroll-label, .main-inner-catalog-filter-grease-header {
+    margin-left: 16px;
+    margin-bottom: 8px;
+}
+
+.main-inner-catalog-filter-grease {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: rgba(252, 252, 252, 0.3);
+    border-radius: 18px;
+}
+
+.main-inner-catalog-filter-grease-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-inner-catalog-filter-fillers{
+    border: none;
+    background: rgba(252, 252, 252, 0.3);
+    border-radius: 18px;
+}
+
+.main-inner-catalog-filter-fillers-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .main-inner-catalog-filter-form .button {
@@ -595,6 +654,11 @@ body {
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
+
+    background: rgba(252, 252, 252, 0.3);
+    border: 2px solid #FCFCFC;
+    border-radius: 20px;
+    width: 185px;
 }
 
 .main-inner-catalog-items img {

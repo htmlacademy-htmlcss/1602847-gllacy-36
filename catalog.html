@@ -7,38 +7,43 @@
 </head>
 <body>
     <header class="main-header">
-        <div class="main-header-navblock-wrapper">
+        <a href="index.html" class="header-logo-wrapper">
             <img class="header-logo" src="images/logo.svg" width="137" height="56" alt="Логотип магазина Глейси">
-            <nav>
-              <ul class="main-header-links">
-                <li class="main-header-link">
-                  <a href="catalog.html">Каталог</a>
-                </li>
-                <li class="main-header-link">
-                  <a href="#">Доставка и оплата</a>
-                </li>
-                <li class="main-header-link">
-                  <a href="#">О компании</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+        </a>
+
+        <div class="main-header-navblock-wrapper">
+          <nav>
+            <ul class="main-header-links">
+              <li class="main-header-link">
+                <a href="catalog.html">Каталог</a>
+              </li>
+              <li class="main-header-link">
+                <a href="#">Доставка и оплата</a>
+              </li>
+              <li class="main-header-link">
+                <a href="#">О компании</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
         <ul class="main-header-user-navigation">
-            <li class="navigation-item">
-              <a href="tel:+78005558628" class="main-header-phone">+7 800 555-86-28</a>
-            </li>
-            <li class="navigation-item">
-              <button class="main-header-search-button" type="button">
-                <span class="visually-hidden">Поиск</span>
-              </button>
-            </li>
-            <li class="navigation-item">
-              <button class="main-header-login-button" type="button" >Вход</button>
-            </li>
-            <li class="navigation-item">
-              <button class="main-header-cart-button" type="button">2 товара</button>
-            </li>
-          </ul>
+          <li class="navigation-item">
+            <a href="tel:+78005558628" class="main-header-phone">+7 800 555-86-28</a>
+          </li>
+          <li class="navigation-item">
+            <button class="main-header-search-button" type="button">
+              <span class="visually-hidden">Поиск</span>
+            </button>
+          </li>
+          <li class="navigation-item">
+            <button class="main-header-login-button" type="button" >Вход</button>
+          </li>
+          <li class="navigation-item">
+            <button class="main-header-cart-button" type="button">2 товара</button>
+          </li>
+        </ul>
+
       </header>
 
     <main class="main-inner">
@@ -66,13 +71,17 @@
             <section class="main-inner-catalog-filter">
                 <h2 class="visually-hidden">Выберите фильтры для товаров</h2>
                 <form class="main-inner-catalog-filter-form" action="https://echo.htmlacademy.ru/courses" method="post">
-                    <label class="main-inner-catalog-filter-sortby-header" for="sort-by">Сортировка:</label>
-                    <select name="sort-by" id="sort-by" >
-                        <option>по популярности</option>
-                    </select>
+                    <div class="main-inner-sortby-filter">
+                        <label class="main-inner-catalog-filter-sortby-header" for="sort-by">Сортировка:</label>
+                        <select class="main-inner-sortby-input" name="sort-by" id="sort-by" >
+                            <option>по популярности</option>
+                        </select>
+                    </div>
 
-                    <label class="main-inner-catalog-filter-scroll-label" for="price">Цена: 100 ₽ – 500 ₽</label>
-                    <input class="main-inner-catalog-filter-scroll" type="range" id="price" name="price" min="0" max="1000">
+                    <div class="main-inner-catalog-scroll-filter">
+                        <label class="main-inner-catalog-filter-scroll-label" for="price">Цена: 100 ₽ – 500 ₽</label>
+                        <input class="main-inner-catalog-scroll-input" type="range" id="price" name="price" min="0" max="1000">
+                    </div>
 
                     <fieldset class="main-inner-catalog-filter-grease">
                         <legend class="main-inner-catalog-filter-grease-header">Жирность:</legend>
