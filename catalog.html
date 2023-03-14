@@ -96,18 +96,40 @@
                         </select>
                     </div>
 
-                    <div class="main-inner-catalog-scroll-filter">
-                        <label class="main-inner-catalog-filter-scroll-label" for="price">Цена: 100 ₽ – 500 ₽</label>
-                        <input class="main-inner-catalog-scroll-input" type="range" id="price" name="price" min="0" max="1000">
-                    </div>
+                    <fieldset class="catalog-filter-group">
+                        <legend class="catalog-filter-title">Цена:</legend>
+
+                        <div class="range">
+                          <div class="range-scale">
+                            <div class="range-bar" style="left: 42px; width: 136px">
+                              <button class="range-toggle toggle-min">
+                                <span class="visually-hidden">Изменить минимальную цену.</span>
+                              </button>
+                              <button class="range-toggle toggle-max">
+                                <span class="visually-hidden">Изменить максимальную цену.</span>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="range-wrapper-inputs">
+                            <label class="catalog-filter-label">
+                              от <input class="range-input" type="number" value="100" name="min-price"> ₽
+                            </label>
+                            <label class="catalog-filter-label">
+                              до <input class="range-input" type="number" value="500" name="max-price" style="width: 37px"> ₽
+                            </label>
+                          </div>
+                        </div>
+                    </fieldset>
 
                     <fieldset class="main-inner-catalog-filter-grease">
                         <legend class="main-inner-catalog-filter-grease-header">Жирность:</legend>
                         <ul class="main-inner-catalog-filter-grease-list">
                             <li class="main-inner-catalog-filter-grease-item">
                                 <label class="control">
-                                    <input class="control-input" type="radio" name="grease" value="0%">
-                                    0%
+                                    <input class="control-input visually-hidden" type="radio" name="grease" value="0%">
+                                    <span class="control-mark"></span>
+                                    <span class="control-label">0%</span>
                                 </label>
                             </li>
                             <li class="main-inner-catalog-filter-grease-item">
@@ -184,7 +206,7 @@
                         <b class="main-purchasables-price">310 ₽/<span>кг</span></b>
                         <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
                           <button class="main-purchasables-button" type="button">
-                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
                             </svg>
                            </button>
@@ -200,7 +222,7 @@
                         <b class="main-purchasables-price">340 ₽/<span>кг</span></b>
                         <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
                           <button class="main-purchasables-button" type="button">
-                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
                             </svg>
                            </button>
@@ -216,7 +238,7 @@
                         <b class="main-purchasables-price">330 ₽/<span>кг</span></b>
                         <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
                           <button class="main-purchasables-button" type="button">
-                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
                             </svg>
                            </button>
@@ -232,7 +254,7 @@
                         <b class="main-purchasables-price">320 ₽/<span>кг</span></b>
                         <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
                           <button class="main-purchasables-button" type="button">
-                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
                             </svg>
                            </button>
@@ -248,7 +270,7 @@
                           <b class="main-purchasables-price">330 ₽/<span>кг</span></b>
                           <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
                           <button class="main-purchasables-button" type="button">
-                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
                             </svg>
                            </button>
@@ -264,7 +286,7 @@
                           <b class="main-purchasables-price">340 ₽/<span>кг</span></b>
                           <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
                           <button class="main-purchasables-button" type="button">
-                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
                             </svg>
                            </button>
@@ -280,7 +302,7 @@
                           <b class="main-purchasables-price">270 ₽/<span>кг</span></b>
                           <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
                           <button class="main-purchasables-button" type="button">
-                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
                             </svg>
                            </button>
@@ -296,7 +318,7 @@
                           <b class="main-purchasables-price">300 ₽/<span>кг</span></b>
                           <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
                           <button class="main-purchasables-button" type="button">
-                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
                             </svg>
                             </button>
@@ -312,7 +334,7 @@
                         <b class="main-purchasables-price">310 ₽/<span>кг</span></b>
                         <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
                         <button class="main-purchasables-button" type="button">
-                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
                             </svg>
                         </button>
@@ -328,7 +350,7 @@
                         <b class="main-purchasables-price">320 ₽/<span>кг</span></b>
                         <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
                           <button class="main-purchasables-button" type="button">
-                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
                             </svg>
                            </button>
@@ -344,7 +366,7 @@
                         <b class="main-purchasables-price">360 ₽/<span>кг</span></b>
                         <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
                           <button class="main-purchasables-button" type="button">
-                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
                             </svg>
                            </button>
@@ -360,7 +382,7 @@
                         <b class="main-purchasables-price">280 ₽/<span>кг</span></b>
                         <p class="main-purchasables-button visually-hidden">Добавить в корзину</p>
                           <button class="main-purchasables-button" type="button">
-                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
                             </svg>
                            </button>
@@ -368,7 +390,6 @@
                     </li>
 
                   </ul>
-                </nav>
             </section>
             <section class="main-inner-content-pages-navigation">
                 <button class="main-inner-catalog-button">Показать еще</button>
@@ -377,46 +398,46 @@
                 <nav class="main-inner-catalog-navigation">
                     <ul class="main-inner-catalog-navigation-list">
                         <li class="main-inner-catalog-navigation-item arrow-left">
-                            <a href="#">
-                                <svg class="navigation-arrow" aria-hidden="true" focusable="false" fill="#2D3440" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <a class="catalog-navigation-link" href="#">
+                                <svg class="navigation-arrow" aria-hidden="true" focusable="false" fill="#2D3440" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.67.67 0 0 0 0 .94l4.67 4.67a.66.66 0 1 0 .94-.94L5.6 8l4.2-4.2Z" clip-rule="evenodd"/>
                                 </svg>
                                 <span class="visually-hidden">Перейти на страницу назад</span>
                             </a>
                         </li>
                         <li class="main-inner-catalog-navigation-item current">
-                            <a href="#">
+                            <a class="catalog-navigation-link" href="#">
                                 1
                                 <span class="visually-hidden">Перейти на первую страницу</span>
                             </a>
                         </li>
                         <li class="main-inner-catalog-navigation-item">
-                            <a href="#">
+                            <a class="catalog-navigation-link" href="#">
                                 2
                                 <span class="visually-hidden">Перейти на вторую страницу</span>
                             </a>
                         </li>
                         <li class="main-inner-catalog-navigation-item">
-                            <a href="#">
+                            <a class="catalog-navigation-link" href="#">
                                 3
                                 <span class="visually-hidden">Перейти на третью страницу</span>
                             </a>
                         </li>
                         <li class="main-inner-catalog-navigation-item">
-                            <a href="#">
+                            <a class="catalog-navigation-link" href="#">
                                 4
                                 <span class="visually-hidden">Перейти на четвертую страницу</span>
                             </a>
                         </li>
                         <li class="main-inner-catalog-navigation-item">
-                            <a href="#">
+                            <a class="catalog-navigation-link" href="#">
                                 5
                                 <span class="visually-hidden">Перейти на пятую страницу</span>
                             </a>
                         </li>
                         <li class="main-inner-catalog-navigation-item arrow-right">
-                            <a href="#">
-                                <svg class="navigation-arrow" aria-hidden="true" focusable="false" fill="#2D3440" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                            <a class="catalog-navigation-link" href="#">
+                                <svg class="navigation-arrow" aria-hidden="true" focusable="false" fill="#2D3440" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z" clip-rule="evenodd"/>
                                 </svg>
                                 <span class="visually-hidden">Перейти на страницу вперёд</span>
