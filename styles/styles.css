@@ -2299,11 +2299,19 @@ body .yellow {
 }
 
 .callback-comment-input {
+    width: 442px;
     min-height: 149px;
     text-align: start;
     margin-bottom: 34px;
+    font: inherit;
+    color: inherit;
+    resize: none;
 }
 
 .modal-callback-button {
     margin-left: 290px;
+}
+
+.modal-callback-form textarea {
+
 }
