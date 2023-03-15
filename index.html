@@ -578,14 +578,13 @@
         <form class="modal-callback-form" action="https://echo.htmlacademy.ru/courses" method="post">
           <h2 class="modal-callback-header">Мы обязательно ответим вам!</h2>
           <label class="visually-hidden" for="credentials">Введите Ваше имя и фамилию.</label>
-          <input class="callback-credentials-input field" type="text" placeholder="Имя и фамилия" id="credentials">
+          <input class="callback-credentials-input field" type="text" placeholder="Имя и фамилия" id="credentials" name="credentials">
 
           <label class="visually-hidden" for="email-callback">Введите Вашу почту.</label>
-          <input class="callback-email-input field" type="text" placeholder="email@example.com" id="email-callback">
+          <input class="callback-email-input field" type="text" placeholder="email@example.com" name="email-callback" id="email-callback">
 
           <label class="visually-hidden" for="comment">Введите комментарий к звонку.</label>
-          <input class="callback-comment-input field" type="text" placeholder="В свободной форме" id="comment">
-
+          <textarea class="callback-comment-input field" placeholder="В свободной форме" name="comment" id="comment" cols="30" rows="10"></textarea>
           <button class="modal-callback-button button-additional" type="submit">Отправить</button>
         </form>
       </div>
