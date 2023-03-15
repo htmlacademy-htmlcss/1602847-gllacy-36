@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
   <body>
     <header class="main-header">
@@ -21,6 +23,26 @@
                       <path fill="#2D3440" fill-rule="evenodd" d="M3.8 6.2a.67.67 0 1 0-.93.94l4.65 4.66a.67.67 0 0 0 .96 0l4.66-4.66a.67.67 0 1 0-.94-.95L8 10.4l-4.2-4.2Z" clip-rule="evenodd"/>
                     </svg>
               </a>
+              <div class="popover popover-catalog visually-hidden">
+                <h2 class="visually-hidden">Выберите один из интересующих Вас пункт каталога.</h2>
+                <ul class="popover-catalog-items">
+                  <li class="popover-catalog-item">
+                    <a href="#">Новинки</a>
+                  </li>
+                  <li class="popover-catalog-item">
+                    <a href="#">Сливочное</a>
+                  </li>
+                  <li class="popover-catalog-item">
+                    <a href="#">Щербеты</a>
+                  </li>
+                  <li class="popover-catalog-item">
+                    <a href="#">Фруктовый лед</a>
+                  </li>
+                  <li class="popover-catalog-item">
+                    <a href="#">Мелорин</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="main-header-link">
               <a class="main-header-link-item" href="#">Доставка и оплата</a>
@@ -43,6 +65,14 @@
                 <path fill="#2D3440" fill-rule="evenodd" d="M2.66 8.19a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.44a.67.67 0 1 1-.94.95l-2.45-2.45Z" clip-rule="evenodd"/>
               </svg>
             </button>
+            <div class="popover popover-search visually-hidden">
+              <h2 class="popover-search-header visually-hidden">Осуществите поиск</h2>
+              <form class="popover-search-form" action="https://echo.htmlacademy.ru/courses" method="post">
+                <label class="visually-hidden" for="search">Введите запрос для поиска.</label>
+                <input class="popover-search-input field" type="text" name="search" placeholder="Поиск по сайту" id="search">
+                <button class="visually-hidden" type="submit">Произвести поисковой запрос.</button>
+              </form>
+            </div>
           </li>
           <li class="navigation-item">
             <button class="main-header-login-button button" type="button">
@@ -51,20 +81,24 @@
               </svg>
               Вход
             </button>
-            <div class="popover popover-login">
+            <div class="popover popover-login visually-hidden">
               <h2 class="popover-login-header">Личный кабинет</h2>
-              <form action="#" method="post" target="_blank">
+              <form action="https://echo.htmlacademy.ru/courses" method="post">
                 <ul class="popover-login-inputs-list">
                   <li class="popover-login-input-item">
                     <input class="popover-login-input-email field" type="text" name="email" placeholder="email@example.com" id="email">
                   </li>
                   <li class="popover-login-input-item">
-                    <input class="popover-login-input-password field" type="password" name="password" placeholder="12345" id="email">
+                    <input class="popover-login-input-password field" type="password" name="password" value="12345" id="email">
                   </li>
                 </ul>
-                <button class="popover-login-button button-additional" type="submit">Войти</button>
-                <a class="popover-login-forgot" href="#">Забыли пароль?</a>
-                <a class="popover-login-forgot" href="#">Регистрация</a>
+                <div class="popover-login-options">
+                  <button class="popover-login-button button-additional" type="submit">Войти</button>
+                  <div class="popover-login-links">
+                    <a class="popover-login-forgot" href="#">Забыли пароль?</a>
+                    <a class="popover-login-register" href="#">Регистрация</a>
+                  </div>
+                </div>
               </form>
             </div>
           </li>
@@ -108,6 +142,10 @@
                   <p class="popover-cart-summary">Итого: 790 ₽</p>
                 </div>
             </div>
+
+            <div class="popover popover-cart-empty visually-hidden">
+              <h2 class="popover-title-empty">Ваша корзина пока <br>пуста</h2>
+            </div>
           </li>
         </ul>
     </header>
@@ -124,6 +162,24 @@
             <p class="main-promo-subheader">
               Натуральное мороженое из свежих сливок <br>
               и молока с вкуснейшим клубничным джемом – <br>это идеальный десерт для всей семьи.
+            </p>
+            <button class="main-promo-cart-button button-main" type="button">Заказать</button>
+          </div>
+          <div class="main-promo-content visually-hidden">
+            <h2 class="main-promo-header">
+              Сливочное мороженое <br>со вкусом банана
+            </h2>
+            <p class="main-promo-subheader">
+              Сливочное мороженое с ярким банановым<br> вкусом подарит вам свежесть и наслаждение <br>даже в самый жаркий летний день.
+            </p>
+            <button class="main-promo-cart-button button-main" type="button">Заказать</button>
+          </div>
+          <div class="main-promo-content visually-hidden">
+            <h2 class="main-promo-header">
+              Карамельный пломбир <br>с маршмеллоу
+            </h2>
+            <p class="main-promo-subheader">
+              Необычный сладкий десерт с карамельным<br> топпингом и кусочками зефира завоюет<br> сердца сладкоежек всех возрастов.
             </p>
             <button class="main-promo-cart-button button-main" type="button">Заказать</button>
           </div>
@@ -391,19 +447,19 @@
                   <span class="tooltip-text" role="tooltip" id="tooltip-label-date">С учётом сложившейся международной обстановки, курс на социально-ориентированный национальный проект способствует повышению качества кластеризации усилий.</span>
                 </span>
               </span>
-              <input class="field" type="text" placeholder="01.04.2020" id="delivery-date">
+              <input class="main-delivery-date-input field" type="text" placeholder="01.04.2020" id="delivery-date">
             </div>
 
             <div class="main-delivery-phone-container">
               <label for="delivery-phone">Телефон</label>
-              <input class="field" type="text" placeholder="+7 800 999-00-00" id="delivery-phone">
+              <input class="main-delivery-phone-input field" type="text" placeholder="+7 800 999-00-00" id="delivery-phone">
             </div>
 
             <div class="main-delivery-address-container">
               <span class="form-label form-label-icon">
-                <label class="form-label" for="appointment-date">Адрес</label>
+                <label class="form-label" for="address">Адрес</label>
                 <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="address">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_23682_226)">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00026 2.12502C4.30774 2.12502 2.12502 4.30774 2.12502 7.00026C2.12502 9.69278 4.30774 11.8755 7.00026 11.8755C9.69278 11.8755 11.8755 9.69278 11.8755 7.00026C11.8755 4.30774 9.69278 2.12502 7.00026 2.12502ZM0.791687 7.00026C0.791687 3.57136 3.57136 0.791687 7.00026 0.791687C10.4292 0.791687 13.2088 3.57136 13.2088 7.00026C13.2088 10.4292 10.4292 13.2088 7.00026 13.2088C3.57136 13.2088 0.791687 10.4292 0.791687 7.00026ZM7.00007 6.33334C7.36826 6.33334 7.66674 6.63182 7.66674 7.00001V9.21677C7.66674 9.58496 7.36826 9.88344 7.00007 9.88344C6.63188 9.88344 6.33341 9.58496 6.33341 9.21677V7.00001C6.33341 6.63182 6.63188 6.33334 7.00007 6.33334ZM7.00007 4.11659C6.63188 4.11659 6.33341 4.41506 6.33341 4.78325C6.33341 5.15144 6.63188 5.44992 7.00007 5.44992H7.0059C7.37409 5.44992 7.67257 5.15144 7.67257 4.78325C7.67257 4.41506 7.37409 4.11659 7.0059 4.11659H7.00007Z" fill="#2D3440"/>
@@ -415,10 +471,10 @@
                       </defs>
                       </svg>
                   </button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Введите название улицы, дома и квартиры</span>
+                  <span class="tooltip-text" role="tooltip" id="address">Введите название улицы, дома и квартиры</span>
                 </span>
               </span>
-              <input class="field" type="text" placeholder="ул. Большая Конюшенная, 19/8" id="delivery-address">
+              <input class="main-delivery-address-input field" type="text" placeholder="ул. Большая Конюшенная, 19/8" id="delivery-address">
             </div>
             <button class="main-delivery-button button-additional" type="submit">Отправить</button>
           </form>
@@ -514,5 +570,25 @@
         </p>
       </div>
     </footer>
+    <div class="modal-container visually-hidden">
+      <div class="modal-callback">
+        <button class="modal-callback-close-button">
+          <span class="visually-hidden">Закрыть модальное окно.</span>
+        </button>
+        <form class="modal-callback-form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <h2 class="modal-callback-header">Мы обязательно ответим вам!</h2>
+          <label class="visually-hidden" for="credentials">Введите Ваше имя и фамилию.</label>
+          <input class="callback-credentials-input field" type="text" placeholder="Имя и фамилия" id="credentials">
+
+          <label class="visually-hidden" for="email-callback">Введите Вашу почту.</label>
+          <input class="callback-email-input field" type="text" placeholder="email@example.com" id="email-callback">
+
+          <label class="visually-hidden" for="comment">Введите комментарий к звонку.</label>
+          <input class="callback-comment-input field" type="text" placeholder="В свободной форме" id="comment">
+
+          <button class="modal-callback-button button-additional" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
