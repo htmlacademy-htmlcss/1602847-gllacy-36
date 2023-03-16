@@ -52,10 +52,12 @@ html {
 }
 
 body {
+    padding: 0 98px;
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    min-width: 100%;
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -100,7 +102,7 @@ body .yellow {
 }
 
 .main-header-navblock-wrapper {
-    width: 575px;
+    width: 560px;
     display: flex;
     align-items: center;
 }
@@ -213,16 +215,6 @@ body .yellow {
     padding: 8px;
 }
 
-.main-header-phone {
-    display: block;
-    font-weight: 700;
-    line-height: 20px;
-    text-decoration: none;
-    color: inherit;
-    padding: 8px 16px;
-    padding-right: 0;
-}
-
 .button {
     cursor: pointer;
 }
@@ -243,6 +235,26 @@ body .yellow {
 .button:active {
     background: #FCFCFC;
     border-radius: 30px;
+}
+
+
+.main-header-phone {
+    display: block;
+    font-weight: 700;
+    line-height: 20px;
+    text-decoration: none;
+    color: inherit;
+    padding: 6px 6px;
+    /* padding-right: 0; */
+}
+
+.main-header-phone:hover, .main-header-phone:focus, .main-header-phone:active {
+    padding: 6px 6px;
+}
+
+.main-header-phone:focus {
+    border: none;
+    outline: 2px solid #2D3440;
 }
 
 .main-header-search-button-icon {
@@ -303,6 +315,7 @@ body .yellow {
 }
 
 .main-promo-subheader {
+    max-width: 429px;
     font-size: 18px;
     line-height: 24px;
     margin: 0;
@@ -381,6 +394,7 @@ body .yellow {
     line-height: 20px;
     padding: 10px 30px;
     border: none;
+    margin-bottom: 117px;
 }
 
 .main-promo-content {
@@ -519,6 +533,8 @@ body .yellow {
 
 .main-gift-banners {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
     justify-content: space-between;
     list-style: none;
     margin: 0;
@@ -611,6 +627,8 @@ body .yellow {
 
 .main-purchasables-list {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
     justify-content: space-between;
     list-style: none;
     margin: 0;
@@ -624,8 +642,8 @@ body .yellow {
     z-index: -1;
     position: absolute;
     top: 15%;
-    width: 270px;
-    height: 281px;
+    width: 100%;
+    height: calc(100% - 15%);
 }
 
 .main-purchasables-item {
@@ -808,6 +826,7 @@ body .yellow {
     width: 570px;
     padding-top: 32px;
     padding-left: 32px;
+    padding-bottom: 67px;
 }
 
 .main-article-header {
@@ -835,6 +854,7 @@ body .yellow {
     border-radius: 16px;
     min-height: 224px;
     width: 570px;
+    height: 100%;
 }
 
 .main-newsletter-form {
@@ -896,6 +916,10 @@ body .yellow {
     display: grid;
     grid-template-columns: 117px 287px;
     column-gap: 16px;
+
+    margin: auto 0;
+    min-height: 406px;
+    height: 100%;
 }
 
 .field {
@@ -926,6 +950,10 @@ body .yellow {
     background: #FFFFFF;
     border: 2px solid #2D3440;
     border-radius: 4px;
+    padding-top: 12px;
+    padding-right: 15px;
+    padding-bottom: 12px;
+    padding-left: 15px;
 }
 
 .field:disabled {
@@ -1305,6 +1333,7 @@ body .yellow {
     padding: 0;
     border: none;
     width: 196px;
+    margin-right: 25px;
 }
 
 .control {
@@ -1557,7 +1586,7 @@ body .yellow {
 .range-wrapper-inputs {
     display: flex;
     justify-content: center;
-    margin-left: -22px;
+    margin-left: 14px;
 }
 
 .catalog-filter-label {
@@ -1632,7 +1661,6 @@ body .yellow {
 .main-inner-catalog-filter-grease {
     padding: 0;
     margin: 0;
-    margin-left: 25px;
     border: none;
 }
 
@@ -1656,6 +1684,7 @@ body .yellow {
 
 .main-inner-catalog-filter-fillers-list {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     padding: 9px 24px;
