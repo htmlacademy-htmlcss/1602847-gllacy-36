@@ -9,8 +9,8 @@
 </head>
 <body>
     <header class="main-header">
-        <a href="index.html" class="header-logo-wrapper">
-            <img class="header-logo" src="images/logo.svg" width="137" height="56" alt="Логотип магазина Глейси">
+        <a href="index.html" class="header-logo-wrapper" aria-current="page">
+            <img class="header-logo" src="images/logo.svg" width="137" height="56" alt="Логотип магазина Глейси.">
         </a>
 
         <div class="main-header-navblock-wrapper">
@@ -23,6 +23,26 @@
                         <path fill="#2D3440" fill-rule="evenodd" d="M3.8 6.2a.67.67 0 1 0-.93.94l4.65 4.66a.67.67 0 0 0 .96 0l4.66-4.66a.67.67 0 1 0-.94-.95L8 10.4l-4.2-4.2Z" clip-rule="evenodd"/>
                       </svg>
                 </a>
+                <div class="popover popover-catalog">
+                  <p class="visually-hidden">Выберите один из интересующих Вас пункт каталога.</p>
+                  <ul class="popover-catalog-items">
+                    <li class="popover-catalog-item">
+                      <a class="popover-catalog-link" href="#">Новинки</a>
+                    </li>
+                    <li class="popover-catalog-item">
+                      <a class="popover-catalog-link" href="#">Сливочное</a>
+                    </li>
+                    <li class="popover-catalog-item">
+                      <a class="popover-catalog-link" href="#">Щербеты</a>
+                    </li>
+                    <li class="popover-catalog-item">
+                      <a class="popover-catalog-link" href="#">Фруктовый лед</a>
+                    </li>
+                    <li class="popover-catalog-item">
+                      <a class="popover-catalog-link" href="#">Мелорин</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li class="main-header-link">
                 <a class="main-header-link-item" href="#">Доставка и оплата</a>
@@ -36,15 +56,23 @@
 
         <ul class="main-header-user-navigation">
             <li class="navigation-item">
-              <a href="tel:+78005558628" class="main-header-phone">+7 800 555-86-28</a>
+              <a href="tel:+78005558628" class="main-header-phone button">+7 800 555-86-28</a>
             </li>
             <li class="navigation-item">
               <button class="main-header-search-button button" type="button">
-                <span class="visually-hidden">Поиск</span>
+                <span class="visually-hidden">Поиск.</span>
                 <svg class="main-header-search-button-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
                   <path fill="#2D3440" fill-rule="evenodd" d="M2.66 8.19a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.44a.67.67 0 1 1-.94.95l-2.45-2.45Z" clip-rule="evenodd"/>
                 </svg>
               </button>
+              <div class="popover popover-search">
+                <p class="popover-search-header visually-hidden">Осуществите поиск.</p>
+                <form class="popover-search-form" action="https://echo.htmlacademy.ru/courses" method="post">
+                  <label class="visually-hidden" for="search">Введите запрос для поиска.</label>
+                  <input class="popover-search-input field" type="text" name="search" placeholder="Поиск по сайту" id="search">
+                  <button class="visually-hidden" type="submit">Произвести поисковой запрос.</button>
+                </form>
+              </div>
             </li>
             <li class="navigation-item">
               <button class="main-header-login-button button" type="button">
@@ -53,6 +81,28 @@
                 </svg>
                 Вход
               </button>
+              <div class="popover popover-login">
+                <p class="popover-login-header">Личный кабинет</p>
+                <form action="https://echo.htmlacademy.ru/courses" method="post">
+                  <ul class="popover-login-inputs-list">
+                    <li class="popover-login-input-item">
+                      <label class="visually-hidden" for="email">Введите почту для входа.</label>
+                      <input class="popover-login-input-email field" type="text" name="email" placeholder="email@example.com" id="email">
+                    </li>
+                    <li class="popover-login-input-item">
+                      <label class="visually-hidden" for="password">Введите пароль.</label>
+                      <input class="popover-login-input-password field" type="password" name="password" value="12345" id="password">
+                    </li>
+                  </ul>
+                  <div class="popover-login-options">
+                    <button class="popover-login-button button-additional" type="submit">Войти</button>
+                    <div class="popover-login-links">
+                      <a class="popover-login-forgot" href="#">Забыли пароль?</a>
+                      <a class="popover-login-register" href="#">Регистрация</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </li>
             <li class="navigation-item">
               <button class="main-header-cart-button button" type="button">
@@ -61,15 +111,51 @@
                 </svg>
                 2 товара
               </button>
+              <div class="popover popover-cart">
+                  <p class="popover-title">Корзина</p>
+                  <ul class="popover-cart-items">
+                    <li class="popover-cart-item">
+                      <img class="popover-cart-item-image" src="./images/icecreams/raspberry.jpg" alt="Малиновое мороженное." width="46" height="46">
+                      <div class="item-description-wrapper">
+                        <p class="popover-cart-item-header">Малинка</p>
+                        <p class="popover-cart-item-subheader">1 кг х 310 ₽</p>
+                      </div>
+                      <p class="popover-cart-item-price">310 ₽&nbsp;</p>
+                      <button class="popover-button-remove" type="button">
+                        <span class="visually-hidden">Удалить элемент из корзины.</span>
+                      </button>
+                    </li>
+                    <li class="popover-cart-item">
+                      <img class="popover-cart-item-image" src="./images/icecreams/bubblegum.jpg" alt="Мороженое с жвачкой." width="46" height="46">
+                      <div class="item-description-wrapper">
+                        <p class="popover-cart-item-header">Бабл-гам</p>
+                        <p class="popover-cart-item-subheader">1,5 кг х 320 ₽</p>
+                      </div>
+                      <p class="popover-cart-item-price">480 ₽&nbsp;</p>
+                      <button class="popover-button-remove" type="button">
+                        <span class="visually-hidden">Удалить элемент из корзины.</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="popover-cart-order-wrapper">
+                    <button class="button-additional" type="button">
+                      Оформить заказ
+                    </button>
+                    <p class="popover-cart-summary">Итого: 790 ₽</p>
+                  </div>
+              </div>
+
+              <div class="popover popover-cart-empty visually-hidden">
+                <p class="popover-title-empty">Ваша корзина пока <br>пуста</p>
+              </div>
             </li>
           </ul>
-
-      </header>
+    </header>
 
     <main class="main-inner">
         <div class="page-container">
             <section class="main-inner-breadcrumbs">
-                <h2 class="visually-hidden">Сейчас вы в меню по следующему пути</h2>
+                <h2 class="visually-hidden">Сейчас вы в меню по следующему пути.</h2>
                 <nav class="main-inner-subnavigation">
                     <ul class="main-inner-subnavigation-list">
                         <li class="main-inner-subnavigation-item">
@@ -89,7 +175,7 @@
             <h1 class="main-inner-catalog-header">Сливочное мороженое</h1>
 
             <section class="main-inner-catalog-filter">
-                <h2 class="visually-hidden">Выберите фильтры для товаров</h2>
+                <h2 class="visually-hidden">Выберите фильтры для товаров.</h2>
                 <form class="main-inner-catalog-filter-form" action="https://echo.htmlacademy.ru/courses" method="post">
                     <div class="main-inner-sortby-filter">
                         <label class="main-inner-catalog-filter-sortby-header" for="sort-by">Сортировка:</label>
@@ -99,22 +185,22 @@
                     </div>
 
                     <fieldset class="catalog-filter-group">
-                        <div class="range-wrapper-inputs">
-                            <legend class="catalog-filter-title">Цена:</legend>
+                        <legend class="range-wrapper-inputs catalog-filter-title">Цена:
                             <label class="catalog-filter-label">
                             <input class="range-input" type="number" value="100" name="min-price"> ₽
                             </label>
                             <label class="catalog-filter-label">
-                              -<input class="range-input" type="number" value="500" name="max-price" style="width: 37px"> ₽
+                                -<input class="range-input" type="number" value="500" name="max-price" style="width: 37px"> ₽
                             </label>
-                        </div>
+                        </legend>
+
                         <div class="range">
                           <div class="range-scale">
                             <div class="range-bar" style="left: 40px; width: 60px">
-                              <button class="range-toggle toggle-min">
+                              <button class="range-toggle toggle-min" type="button">
                                 <span class="visually-hidden">Изменить минимальную цену.</span>
                               </button>
-                              <button class="range-toggle toggle-max">
+                              <button class="range-toggle toggle-max" type="button">
                                 <span class="visually-hidden">Изменить максимальную цену.</span>
                               </button>
                             </div>
@@ -163,7 +249,7 @@
                                 <label class="control-check">
                                     <input class="control-input-check visually-hidden" type="checkbox" name="fillers" value="шоколадные">
                                     <span class="control-mark-check">
-                                        <svg class="control-mark-check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2D3440" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill-rule="evenodd" d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" clip-rule="evenodd"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+                                        <svg class="control-mark-check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2D3440" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill-rule="evenodd" d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" clip-rule="evenodd"/></g></svg>
                                     </span>
                                     <span class="control-label">шоколадные</span>
                                 </label>
@@ -172,7 +258,7 @@
                                 <label class="control-check">
                                     <input class="control-input-check visually-hidden" type="checkbox" name="fillers" value="сахарные посыпки" checked>
                                     <span class="control-mark-check">
-                                        <svg class="control-mark-check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2D3440" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill-rule="evenodd" d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" clip-rule="evenodd"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+                                        <svg class="control-mark-check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2D3440" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill-rule="evenodd" d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" clip-rule="evenodd"/></g></svg>
                                     </span>
                                     <span class="control-label">сахарные посыпки</span>
                                 </label>
@@ -181,7 +267,7 @@
                                 <label class="control-check">
                                     <input class="control-input-check visually-hidden" type="checkbox" name="fillers" value="фрукты">
                                     <span class="control-mark-check">
-                                        <svg class="control-mark-check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2D3440" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill-rule="evenodd" d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" clip-rule="evenodd"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+                                        <svg class="control-mark-check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2D3440" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill-rule="evenodd" d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" clip-rule="evenodd"/></g></svg>
                                     </span>
                                     <span class="control-label">фрукты</span>
                                 </label>
@@ -190,7 +276,7 @@
                                 <label class="control-check">
                                     <input class="control-input-check visually-hidden" type="checkbox" name="fillers" value="сиропы">
                                     <span class="control-mark-check">
-                                        <svg class="control-mark-check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2D3440" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill-rule="evenodd" d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" clip-rule="evenodd"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+                                        <svg class="control-mark-check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2D3440" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill-rule="evenodd" d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" clip-rule="evenodd"/></g></svg>
                                     </span>
                                     <span class="control-label">сиропы</span>
                                 </label>
@@ -199,7 +285,7 @@
                                 <label class="control-check">
                                     <input class="control-input-check visually-hidden" type="checkbox" name="fillers" value="джемы" >
                                     <span class="control-mark-check">
-                                        <svg class="control-mark-check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2D3440" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill-rule="evenodd" d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" clip-rule="evenodd"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+                                        <svg class="control-mark-check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2D3440" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill-rule="evenodd" d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" clip-rule="evenodd"/></g></svg>
                                     </span>
                                     <span class="control-label">джемы</span>
                                 </label>
@@ -212,7 +298,7 @@
             </section>
 
             <section class="main-inner-catalog-items">
-                <h2 class="visually-hidden">Товары</h2>
+                <h2 class="visually-hidden">Товары.</h2>
                 <ul class="main-purchasables-list-catalog">
                     <li class="main-purchasables-item">
                       <img class="main-purchasables-image" src="images/icecreams/raspberry.jpg" width="168" height="168" alt="Наше малиновое мороженное.">
@@ -222,7 +308,7 @@
                       </div>
                       <div class="main-purchasables-purchase-wrapper">
                         <b class="main-purchasables-price">310 ₽/<span>кг</span></b>
-                        <p class="visually-hidden">Добавить в корзину</p>
+                        <p class="visually-hidden">Добавить в корзину.</p>
                           <button class="main-purchasables-button" type="button">
                             <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
@@ -231,14 +317,14 @@
                       </div>
                     </li>
                     <li class="main-purchasables-item">
-                      <img class="main-purchasables-image" src="images/icecreams/pistachio.jpg" width="168" height="168" alt="Мороженое с фисташками">
+                      <img class="main-purchasables-image" src="images/icecreams/pistachio.jpg" width="168" height="168" alt="Мороженое с фисташками.">
                       <div class="main-purchasables-text-wrapper">
                         <h3 class="main-purchasables-header">Фисташка</h3>
                         <p class="main-purchasables-subheader">Фисташковый пломбир <br>с кусочками шоколада</p>
                       </div>
                       <div class="main-purchasables-purchase-wrapper">
                         <b class="main-purchasables-price">340 ₽/<span>кг</span></b>
-                        <p class="visually-hidden">Добавить в корзину</p>
+                        <p class="visually-hidden">Добавить в корзину.</p>
                           <button class="main-purchasables-button" type="button">
                             <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
@@ -247,14 +333,14 @@
                       </div>
                     </li>
                     <li class="main-purchasables-item">
-                      <img class="main-purchasables-image" src="images/icecreams/blackberry.jpg" width="168" height="168" alt="Мороженое с черникой">
+                      <img class="main-purchasables-image" src="images/icecreams/blackberry.jpg" width="168" height="168" alt="Мороженое с черникой.">
                       <div class="main-purchasables-text-wrapper">
                         <h3 class="main-purchasables-header">Черника</h3>
                         <p class="main-purchasables-subheader">Крем-брюле <br>с черничным джемом</p>
                       </div>
                       <div class="main-purchasables-purchase-wrapper">
                         <b class="main-purchasables-price">330 ₽/<span>кг</span></b>
-                        <p class="visually-hidden">Добавить в корзину</p>
+                        <p class="visually-hidden">Добавить в корзину.</p>
                           <button class="main-purchasables-button" type="button">
                             <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
@@ -263,14 +349,14 @@
                       </div>
                     </li>
                     <li class="main-purchasables-item">
-                      <img class="main-purchasables-image" src="images/icecreams/bubblegum.jpg" width="168" height="168" alt="Мороженое с жевачкой">
+                      <img class="main-purchasables-image" src="images/icecreams/bubblegum.jpg" width="168" height="168" alt="Мороженое с жевачкой.">
                       <div class="main-purchasables-text-wrapper">
                         <h3 class="main-purchasables-header">Бабл-гам</h3>
                         <p class="main-purchasables-subheader">Ванильный пломбир <br>со сладкой посыпкой</p>
                       </div>
                       <div class="main-purchasables-purchase-wrapper">
                         <b class="main-purchasables-price">320 ₽/<span>кг</span></b>
-                        <p class="visually-hidden">Добавить в корзину</p>
+                        <p class="visually-hidden">Добавить в корзину.</p>
                           <button class="main-purchasables-button" type="button">
                             <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
@@ -279,14 +365,14 @@
                       </div>
                     </li>
                     <li class="main-purchasables-item">
-                        <img class="main-purchasables-image" src="images/icecreams/bramble.jpg" width="168" height="168" alt="Мороженое с ежевикой">
+                        <img class="main-purchasables-image" src="images/icecreams/bramble.jpg" width="168" height="168" alt="Мороженое с ежевикой.">
                         <div class="main-purchasables-text-wrapper">
                           <h3 class="main-purchasables-header">Ежевика</h3>
                           <p class="main-purchasables-subheader">Сливочное мороженое <br>с ежевичным джемом</p>
                         </div>
                         <div class="main-purchasables-purchase-wrapper">
                           <b class="main-purchasables-price">330 ₽/<span>кг</span></b>
-                          <p class="visually-hidden">Добавить в корзину</p>
+                          <p class="visually-hidden">Добавить в корзину.</p>
                           <button class="main-purchasables-button" type="button">
                             <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
@@ -295,14 +381,14 @@
                         </div>
                       </li>
                       <li class="main-purchasables-item">
-                        <img class="main-purchasables-image" src="images/icecreams/banana.jpg" width="168" height="168" alt="Мороженое с бананом">
+                        <img class="main-purchasables-image" src="images/icecreams/banana.jpg" width="168" height="168" alt="Мороженое с бананом.">
                         <div class="main-purchasables-text-wrapper">
                           <h3 class="main-purchasables-header">Банан</h3>
                           <p class="main-purchasables-subheader">Сливочный пломбир <br>с банановым вкусом</p>
                         </div>
                         <div class="main-purchasables-purchase-wrapper">
                           <b class="main-purchasables-price">340 ₽/<span>кг</span></b>
-                          <p class="visually-hidden">Добавить в корзину</p>
+                          <p class="visually-hidden">Добавить в корзину.</p>
                           <button class="main-purchasables-button" type="button">
                             <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
@@ -311,14 +397,14 @@
                         </div>
                       </li>
                       <li class="main-purchasables-item">
-                        <img class="main-purchasables-image" src="images/icecreams/chocolate.jpg" width="168" height="168" alt="Наше шоколадное">
+                        <img class="main-purchasables-image" src="images/icecreams/chocolate.jpg" width="168" height="168" alt="Наше шоколадное.">
                         <div class="main-purchasables-text-wrapper">
                           <h3 class="main-purchasables-header">Шоколадка</h3>
                           <p class="main-purchasables-subheader">Классический<br> шоколадный пломбир</p>
                         </div>
                         <div class="main-purchasables-purchase-wrapper">
                           <b class="main-purchasables-price">270 ₽/<span>кг</span></b>
-                          <p class="visually-hidden">Добавить в корзину</p>
+                          <p class="visually-hidden">Добавить в корзину.</p>
                           <button class="main-purchasables-button" type="button">
                             <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
@@ -327,14 +413,14 @@
                         </div>
                       </li>
                       <li class="main-purchasables-item">
-                        <img class="main-purchasables-image" src="images/icecreams/strawberry.jpg" width="168" height="168" alt="Клубничное мороженное">
+                        <img class="main-purchasables-image" src="images/icecreams/strawberry.jpg" width="168" height="168" alt="Клубничное мороженное.">
                         <div class="main-purchasables-text-wrapper">
                           <h3 class="main-purchasables-header">Клубничка</h3>
                           <p class="main-purchasables-subheader">Сливочный пломбир <br>с клубничным вкусом</p>
                         </div>
                         <div class="main-purchasables-purchase-wrapper">
                           <b class="main-purchasables-price">300 ₽/<span>кг</span></b>
-                          <p class="visually-hidden">Добавить в корзину</p>
+                          <p class="visually-hidden">Добавить в корзину.</p>
                           <button class="main-purchasables-button" type="button">
                             <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
@@ -343,14 +429,14 @@
                         </div>
                       </li>
                       <li class="main-purchasables-item">
-                      <img class="main-purchasables-image" src="images/icecreams/lemon.jpg" width="168" height="168" alt="Лимонный сорбет">
+                      <img class="main-purchasables-image" src="images/icecreams/lemon.jpg" width="168" height="168" alt="Лимонный сорбет.">
                       <div class="main-purchasables-text-wrapper">
                         <h3 class="main-purchasables-header">Лимон</h3>
                         <p class="main-purchasables-subheader">Освежающий <br>лимонный сорбет</p>
                       </div>
                       <div class="main-purchasables-purchase-wrapper">
                         <b class="main-purchasables-price">310 ₽/<span>кг</span></b>
-                        <p class="visually-hidden">Добавить в корзину</p>
+                        <p class="visually-hidden">Добавить в корзину.</p>
                         <button class="main-purchasables-button" type="button">
                             <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
@@ -359,14 +445,14 @@
                       </div>
                     </li>
                     <li class="main-purchasables-item">
-                      <img class="main-purchasables-image" src="images/icecreams/menthol.jpg" width="168" height="168" alt="Мороженое с ментоловым сиропом">
+                      <img class="main-purchasables-image" src="images/icecreams/menthol.jpg" width="168" height="168" alt="Мороженое с ментоловым сиропом.">
                       <div class="main-purchasables-text-wrapper">
                         <h3 class="main-purchasables-header">Ментол</h3>
                         <p class="main-purchasables-subheader">Сливочный пломбир <br>с ментоловым сиропом</p>
                       </div>
                       <div class="main-purchasables-purchase-wrapper">
                         <b class="main-purchasables-price">320 ₽/<span>кг</span></b>
-                        <p class="visually-hidden">Добавить в корзину</p>
+                        <p class="visually-hidden">Добавить в корзину.</p>
                           <button class="main-purchasables-button" type="button">
                             <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
@@ -375,14 +461,14 @@
                       </div>
                     </li>
                     <li class="main-purchasables-item">
-                      <img class="main-purchasables-image" src="images/icecreams/nuts.jpg" width="168" height="168" alt="Мороженое с орехами">
+                      <img class="main-purchasables-image" src="images/icecreams/nuts.jpg" width="168" height="168" alt="Мороженое с орехами.">
                       <div class="main-purchasables-text-wrapper">
                         <h3 class="main-purchasables-header">Орешек</h3>
                         <p class="main-purchasables-subheader">Фисташковый пломбир <br>с шоколадным сиропом</p>
                       </div>
                       <div class="main-purchasables-purchase-wrapper">
                         <b class="main-purchasables-price">360 ₽/<span>кг</span></b>
-                        <p class="visually-hidden">Добавить в корзину</p>
+                        <p class="visually-hidden">Добавить в корзину.</p>
                           <button class="main-purchasables-button" type="button">
                             <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
@@ -391,14 +477,14 @@
                       </div>
                     </li>
                     <li class="main-purchasables-item">
-                      <img class="main-purchasables-image" src="images/icecreams/cream.jpg" width="168" height="168" alt="Крем-брюле">
+                      <img class="main-purchasables-image" src="images/icecreams/cream.jpg" width="168" height="168" alt="Крем-брюле.">
                       <div class="main-purchasables-text-wrapper">
                         <h3 class="main-purchasables-header">Крем-брюле</h3>
                         <p class="main-purchasables-subheader">Классическое <br>крем-брюле</p>
                       </div>
                       <div class="main-purchasables-purchase-wrapper">
                         <b class="main-purchasables-price">280 ₽/<span>кг</span></b>
-                        <p class="visually-hidden">Добавить в корзину</p>
+                        <p class="visually-hidden">Добавить в корзину.</p>
                           <button class="main-purchasables-button" type="button">
                             <svg class="main-purchasables-button-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" clip-rule="evenodd"/>
@@ -410,9 +496,9 @@
                   </ul>
             </section>
             <section class="main-inner-content-pages-navigation">
-                <button class="main-inner-catalog-button">Показать еще</button>
+                <button class="main-inner-catalog-button" type="button">Показать еще</button>
 
-                <h2 class="visually-hidden">Выберите страницу каталога товаров</h2>
+                <h2 class="visually-hidden">Выберите страницу каталога товаров.</h2>
                 <nav class="main-inner-catalog-navigation">
                     <ul class="main-inner-catalog-navigation-list">
                         <li class="main-inner-catalog-navigation-item arrow-left">
@@ -420,37 +506,37 @@
                                 <svg class="navigation-arrow" aria-hidden="true" focusable="false" fill="#2D3440" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M9.8 3.8a.66.66 0 1 0-.94-.94L4.2 7.53a.67.67 0 0 0 0 .94l4.67 4.67a.66.66 0 1 0 .94-.94L5.6 8l4.2-4.2Z" clip-rule="evenodd"/>
                                 </svg>
-                                <span class="visually-hidden">Перейти на страницу назад</span>
+                                <span class="visually-hidden">Перейти на страницу назад.</span>
                             </a>
                         </li>
                         <li class="main-inner-catalog-navigation-item current">
                             <a class="catalog-navigation-link" href="#">
                                 1
-                                <span class="visually-hidden">Перейти на первую страницу</span>
+                                <span class="visually-hidden">Перейти на первую страницу.</span>
                             </a>
                         </li>
                         <li class="main-inner-catalog-navigation-item">
                             <a class="catalog-navigation-link" href="#">
                                 2
-                                <span class="visually-hidden">Перейти на вторую страницу</span>
+                                <span class="visually-hidden">Перейти на вторую страницу.</span>
                             </a>
                         </li>
                         <li class="main-inner-catalog-navigation-item">
                             <a class="catalog-navigation-link" href="#">
                                 3
-                                <span class="visually-hidden">Перейти на третью страницу</span>
+                                <span class="visually-hidden">Перейти на третью страницу.</span>
                             </a>
                         </li>
                         <li class="main-inner-catalog-navigation-item">
                             <a class="catalog-navigation-link" href="#">
                                 4
-                                <span class="visually-hidden">Перейти на четвертую страницу</span>
+                                <span class="visually-hidden">Перейти на четвертую страницу.</span>
                             </a>
                         </li>
                         <li class="main-inner-catalog-navigation-item">
                             <a class="catalog-navigation-link" href="#">
                                 5
-                                <span class="visually-hidden">Перейти на пятую страницу</span>
+                                <span class="visually-hidden">Перейти на пятую страницу.</span>
                             </a>
                         </li>
                         <li class="main-inner-catalog-navigation-item arrow-right">
@@ -458,7 +544,7 @@
                                 <svg class="navigation-arrow" aria-hidden="true" focusable="false" fill="#2D3440" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z" clip-rule="evenodd"/>
                                 </svg>
-                                <span class="visually-hidden">Перейти на страницу вперёд</span>
+                                <span class="visually-hidden">Перейти на страницу вперёд.</span>
                             </a>
                         </li>
                     </ul>
@@ -471,7 +557,7 @@
         <ul class="main-footer-media-links">
           <li class="main-footer-media-item">
             <a class="main-footer-media-tg" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Переходите в наш телеграм</span>
+              <span class="visually-hidden">Переходите в наш телеграм.</span>
               <svg class="main-footer-media-icon"  fill="#FCFCFC" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0ZM12.43 8.86c-1.17.48-3.5 1.49-7 3.01-.57.23-.86.45-.9.67-.04.36.42.5 1.04.7l.27.08c.6.2 1.43.44 1.86.45.39 0 .82-.16 1.3-.48 3.27-2.21 4.96-3.33 5.06-3.35.08-.02.18-.04.25.02.07.07.07.18.06.22-.05.19-1.84 1.86-2.77 2.72a28.24 28.24 0 0 0-.82.79c-.57.54-1 .96.02 1.63.5.32.89.59 1.28.85a88.77 88.77 0 0 0 1.8 1.23c.5.35.95.67 1.5.62.32-.03.65-.33.82-1.23.4-2.13 1.18-6.73 1.36-8.63.01-.16 0-.31-.02-.47a.5.5 0 0 0-.17-.33.78.78 0 0 0-.46-.14c-.46.01-1.15.25-4.48 1.64Z" clip-rule="evenodd"/>
               </svg>
@@ -479,7 +565,7 @@
           </li>
           <li class="main-footer-media-item">
             <a class="main-footer-media-vk" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Переходите в нашу группу ВКонтакте</span>
+              <span class="visually-hidden">Переходите в нашу группу ВКонтакте.</span>
               <svg class="main-footer-media-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0Zm-11.41 2.97h-.72s-1.58.09-2.98-1.18C7.37 12.4 6.03 9.65 6.03 9.65s-.07-.18 0-.27c.1-.1.36-.1.36-.1l1.72-.01s.16.02.27.1c.1.05.15.17.15.17s.28.61.65 1.17c.71 1.08 1.05 1.32 1.29 1.2.35-.16.25-1.53.25-1.53s0-.5-.18-.71c-.14-.17-.41-.22-.53-.24-.1-.01.06-.2.26-.3.31-.13.86-.13 1.5-.13.5 0 .65.03.84.07.46.1.44.41.41 1.08l-.02.7v.18c-.01.34-.02.73.23.88.13.07.45 0 1.26-1.19.38-.56.66-1.23.66-1.23s.07-.12.16-.17c.1-.05.24-.04.24-.04h1.8s.54-.06.63.15c.1.23-.2.75-.94 1.61-.7.82-1.03 1.12-1 1.38.01.2.23.38.66.72.89.73 1.13 1.1 1.18 1.2l.01.01c.4.58-.44.62-.44.62l-1.6.02s-.34.06-.8-.2a3.94 3.94 0 0 1-.69-.6c-.33-.34-.65-.66-.91-.58-.45.12-.44.96-.44.96s0 .18-.1.28c-.1.1-.32.12-.32.12Z" clip-rule="evenodd"/>
               </svg>
@@ -487,7 +573,7 @@
           </li>
           <li class="main-footer-media-item">
             <a class="main-footer-media-instagram" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Переходите на наш ютуб-канал</span>
+              <span class="visually-hidden">Переходите на наш ютуб-канал.</span>
               <svg class="main-footer-media-icon" fill="#FCFCFC" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#FCFCFC" d="m14 11.8-2.8-1.32c-.25-.11-.45.01-.45.29v2.46c0 .28.2.4.45.29L14 12.2c.25-.12.25-.3 0-.42ZM12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm0 16.88c-6.14 0-6.25-.56-6.25-4.88s.1-4.88 6.25-4.88c6.14 0 6.25.56 6.25 4.88s-.1 4.88-6.25 4.88Z"/></svg>
             </a>
           </li>
