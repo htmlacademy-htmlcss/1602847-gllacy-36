@@ -152,6 +152,7 @@ body .yellow {
     line-height: 20px;
     display: block;
     text-align: center;
+    position: relative;
 }
 
 .main-header-link-item {
@@ -211,9 +212,19 @@ body .yellow {
 .main-header-search-button {
     position: relative;
     border: none;
+    fill: #2D3440;
     background: rgba(252, 252, 252, 0.3);
     border-radius: 27px;
     padding: 8px;
+}
+
+.main-header-search-button.active, .main-header-login-button.active, .main-header-cart-button.active {
+    background: #FF4A78;
+    color: #FCFCFC;
+}
+
+.active path{
+    fill: #FCFCFC;
 }
 
 .button {
@@ -246,16 +257,10 @@ body .yellow {
     text-decoration: none;
     color: inherit;
     padding: 6px 6px;
-    /* padding-right: 0; */
 }
 
 .main-header-phone:hover, .main-header-phone:focus, .main-header-phone:active {
     padding: 6px 6px;
-}
-
-.main-header-phone:focus {
-    border: none;
-    outline: 2px solid #2D3440;
 }
 
 .main-header-search-button-icon {
@@ -1379,11 +1384,31 @@ body .yellow {
 .control-input[type="radio"]:hover + .control-mark{
     border: 2px solid #FCFCFC;
 }
+.control-input[type="radio"]:focus + .control-mark{
+    border: 2px solid #FCFCFC;
+}
 
 .control-input[type="radio"]:checked:hover + .control-mark{
     border: 2px solid #FCFCFC;
 }
+
+.control-input[type="radio"]:checked:focus + .control-mark{
+    border: 2px solid #FCFCFC;
+}
+
 .control-input[type="radio"]:checked:hover + .control-mark::before{
+    content: "";
+    position: absolute;
+    background-color: #FCFCFC;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.control-input[type="radio"]:checked:focus + .control-mark::before{
     content: "";
     position: absolute;
     background-color: #FCFCFC;
@@ -1461,6 +1486,33 @@ body .yellow {
 
 .control-input-check[type="checkbox"]:checked:hover ~ .control-mark-check svg {
     fill: #FCFCFC;
+}
+
+.control-input-check[type="checkbox"]:checked:focus ~ .control-mark-check {
+    border: none;
+}
+
+.control-input-check[type="checkbox"]:checked:focus ~ .control-mark-check svg {
+    display: block;
+    fill: #FCFCFC;
+}
+
+.control-input-check[type="checkbox"]:hover ~ .control-mark-check svg {
+    display: none;
+}
+
+.control-input-check[type="checkbox"]:hover ~ .control-mark-check {
+    border: 2px solid #FCFCFC;
+    border-radius: 2px;
+}
+
+.control-input-check[type="checkbox"]:focus ~ .control-mark-check svg {
+    display: none;
+}
+
+.control-input-check[type="checkbox"]:focus ~ .control-mark-check {
+    border: 2px solid #FCFCFC;
+    border-radius: 2px;
 }
 
 .control-input-check[type="checkbox"]:disabled ~ .control-mark-check {
@@ -2124,7 +2176,7 @@ body .yellow {
 .popover-login {
     width: 420px;
     min-height: 350px;
-    display: none;
+    /* display: none; */
 }
 
 .popover-login-header {
@@ -2191,16 +2243,16 @@ body .yellow {
     width: 356px;
     min-height: 96px;
     padding: 24px 16px;
-    display: none;
+    /* display: none; */
 }
 
-.popover-cart {
+/* .popover-cart {
     display: none;
-}
+} */
 
-.navigation-item:focus-within .popover-search,  .navigation-item:focus-within .popover-login, .navigation-item:focus-within .popover-cart{
+/* .navigation-item:focus-within .popover-search,  .navigation-item:focus-within .popover-login, .navigation-item:focus-within .popover-cart{
     display: block;
-}
+} */
 
 .popover-search-input {
     width: 100%;
@@ -2223,16 +2275,28 @@ body .yellow {
 }
 
 .popover-catalog {
-    top: 78px;
-    left: 289px;
+    left: 2px;
     width: 135px;
     min-height: 188px;
     padding: 0;
-    display: none;
+    /* display: none; */
 }
 
-.main-header-link:focus-within .popover-catalog {
+/* .main-header-link:focus-within .popover-catalog {
     display: block;
+} */
+
+.catalog.active{
+    background-color: #FF4A78;
+    border-color: #FF4A78;
+    border-radius: 30px;
+    color: #FCFCFC;
+    outline: none;
+}
+
+.active .main-header-catalog-button-icon{
+    fill: #FCFCFC;
+    transform: rotate(180deg);
 }
 
 .popover-catalog-items {
@@ -2241,12 +2305,40 @@ body .yellow {
     list-style-type: none;
 }
 
-.popover-catalog-item:first-child {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-bottom: 16px;
-    text-align: left;
+.popover-catalog-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 16px;
+}
 
+.popover-catalog-item:not(.popover-catalog-item:first-child):hover a{
+    background-color: #FFCBD8;
+    outline: none;
+}
+
+.popover-catalog-item:not(.popover-catalog-item:first-child):active a{
+    background-color: #FF7799;
+    outline: none;
+}
+
+.popover-catalog-link:focus {
+    background-color: #FF7799;
+    outline: none;
+}
+
+.popover-catalog-link .current {
+    color: #FCFCFC;
+    background-color: #FF4A78;
+}
+
+.popover-catalog-item:first-child {
+    text-align: left;
     position: relative;
 }
 
@@ -2257,6 +2349,13 @@ body .yellow {
     line-height: 20px;
     color: inherit;
     text-decoration: none;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 16px;
+}
+
+.popover-catalog-item:first-child a:focus {
+    background: none;
 }
 
 .popover-catalog-item:first-child::after {
@@ -2271,38 +2370,11 @@ body .yellow {
 
 .popover-catalog-item {
     text-align: left;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 16px;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
 }
 
-.popover-catalog-item a {
-    color: inherit;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.popover-catalog-item:not(.popover-catalog-item:first-child):hover {
-    background-color: #FFCBD8;
-}
-
-.popover-catalog-item:not(.popover-catalog-item:first-child):active {
-    background-color: #FF7799;
-}
-
-.popover-catalog-link:not(.popover-catalog-item:first-child):focus .popover-catalog-item{
-    background-color: #FF7799;
-}
-
-.popover-catalog-item .current {
-    color: #FCFCFC;
-    background-color: #FF4A78;
-}
 
 .modal-container {
     position: fixed;
@@ -2375,8 +2447,4 @@ body .yellow {
 
 .modal-callback-button {
     margin-left: 290px;
-}
-
-.modal-callback-form textarea {
-
 }
