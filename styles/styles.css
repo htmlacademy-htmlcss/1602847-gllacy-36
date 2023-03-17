@@ -2013,10 +2013,10 @@ body .yellow {
     grid-template-columns: 126px 182px;
     column-gap: 24px;
     row-gap: 8px;
-    margin-top: 35px;
+    margin-top: 33px;
 }
 
-.main-footer-additional-link-special {
+.main-footer-additional-item:first-child a{
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
