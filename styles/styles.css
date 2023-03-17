@@ -86,23 +86,24 @@ body .yellow {
 .main-container section:last-child {
     margin-bottom: 0;
 }
+
 /* Header styles start */
 .main-header {
     display: flex;
     margin: 24px auto;
     width: 1170px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     margin-bottom: 20px
 }
 
 .header-logo-wrapper {
-    width: 166px;
+    width: 137px;
 }
 
 .main-header-navblock-wrapper {
-    width: 560px;
+    width: 422px;
     display: flex;
     align-items: center;
 }
@@ -110,8 +111,7 @@ body .yellow {
 .main-header-user-navigation {
     margin: 0;
     padding: 0;
-    width: 546px;
-    margin-left: 12px;
+    margin-left: auto;
     margin-top: -7px;
     display: flex;
     flex-wrap: wrap;
@@ -122,13 +122,14 @@ body .yellow {
 .navigation-item {
     min-width: 32px;
     min-height: 32px;
-    margin-left: 16px;
+    margin-left: 17px;
     position: relative;
 }
 
-.navigation-item:first-child{
-    margin: 0;
+.navigation-item:nth-child(2){
+    margin-left: 8px;
 }
+
 
 .navigation-item button {
     min-width: 32px;
@@ -143,7 +144,7 @@ body .yellow {
     display: flex;
     flex-wrap: wrap;
     width: 569px;
-    margin-left: 13px;
+    margin-left: 15px;
     margin-top: -6px;
 }
 
@@ -1375,6 +1376,10 @@ body .yellow {
 }
 
 /* Radio checked hover */
+.control-input[type="radio"]:hover + .control-mark{
+    border: 2px solid #FCFCFC;
+}
+
 .control-input[type="radio"]:checked:hover + .control-mark{
     border: 2px solid #FCFCFC;
 }
@@ -2030,6 +2035,9 @@ body .yellow {
     margin-top: 6px;
     margin-bottom: 29px;
     margin-left: 1px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
 }
 
 .popover-cart-item {
@@ -2048,6 +2056,7 @@ body .yellow {
     margin-left: 17px;
     margin-top: 7px;
     min-width: 100px;
+    width: 154px;
 }
 
 .popover-cart-item-header {
@@ -2068,7 +2077,7 @@ body .yellow {
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
-    margin-left: 64px;
+    margin-left: 10px;
 }
 
 .popover-cart-item button{
@@ -2115,6 +2124,7 @@ body .yellow {
 .popover-login {
     width: 420px;
     min-height: 350px;
+    display: none;
 }
 
 .popover-login-header {
@@ -2123,6 +2133,10 @@ body .yellow {
     margin-top: 6px;
     margin-bottom: 34px;
     margin-left: -2px;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
 }
 
 .popover-login-inputs-list {
@@ -2177,6 +2191,15 @@ body .yellow {
     width: 356px;
     min-height: 96px;
     padding: 24px 16px;
+    display: none;
+}
+
+.popover-cart {
+    display: none;
+}
+
+.navigation-item:focus-within .popover-search,  .navigation-item:focus-within .popover-login, .navigation-item:focus-within .popover-cart{
+    display: block;
 }
 
 .popover-search-input {
@@ -2193,14 +2216,23 @@ body .yellow {
     padding: 0;
     margin: 0;
     text-align: center;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
 }
 
 .popover-catalog {
-    top: 79px;
-    left: 319px;
+    top: 78px;
+    left: 289px;
     width: 135px;
     min-height: 188px;
     padding: 0;
+    display: none;
+}
+
+.main-header-link:focus-within .popover-catalog {
+    display: block;
 }
 
 .popover-catalog-items {
@@ -2260,6 +2292,10 @@ body .yellow {
 }
 
 .popover-catalog-item:not(.popover-catalog-item:first-child):active {
+    background-color: #FF7799;
+}
+
+.popover-catalog-link:not(.popover-catalog-item:first-child):focus .popover-catalog-item{
     background-color: #FF7799;
 }
 

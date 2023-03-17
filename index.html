@@ -23,23 +23,23 @@
                       <path fill="#2D3440" fill-rule="evenodd" d="M3.8 6.2a.67.67 0 1 0-.93.94l4.65 4.66a.67.67 0 0 0 .96 0l4.66-4.66a.67.67 0 1 0-.94-.95L8 10.4l-4.2-4.2Z" clip-rule="evenodd"/>
                     </svg>
               </a>
-              <div class="popover popover-catalog visually-hidden">
-                <h2 class="visually-hidden">Выберите один из интересующих Вас пункт каталога.</h2>
+              <div class="popover popover-catalog">
+                <p class="visually-hidden">Выберите один из интересующих Вас пункт каталога.</p>
                 <ul class="popover-catalog-items">
                   <li class="popover-catalog-item">
-                    <a href="#">Новинки</a>
+                    <a class="popover-catalog-link" href="#">Новинки</a>
                   </li>
                   <li class="popover-catalog-item">
-                    <a href="#">Сливочное</a>
+                    <a class="popover-catalog-link" href="#">Сливочное</a>
                   </li>
                   <li class="popover-catalog-item">
-                    <a href="#">Щербеты</a>
+                    <a class="popover-catalog-link" href="#">Щербеты</a>
                   </li>
                   <li class="popover-catalog-item">
-                    <a href="#">Фруктовый лед</a>
+                    <a class="popover-catalog-link" href="#">Фруктовый лед</a>
                   </li>
                   <li class="popover-catalog-item">
-                    <a href="#">Мелорин</a>
+                    <a class="popover-catalog-link" href="#">Мелорин</a>
                   </li>
                 </ul>
               </div>
@@ -65,8 +65,8 @@
                 <path fill="#2D3440" fill-rule="evenodd" d="M2.66 8.19a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.44a.67.67 0 1 1-.94.95l-2.45-2.45Z" clip-rule="evenodd"/>
               </svg>
             </button>
-            <div class="popover popover-search visually-hidden">
-              <h2 class="popover-search-header visually-hidden">Осуществите поиск.</h2>
+            <div class="popover popover-search">
+              <p class="popover-search-header visually-hidden">Осуществите поиск.</p>
               <form class="popover-search-form" action="https://echo.htmlacademy.ru/courses" method="post">
                 <label class="visually-hidden" for="search">Введите запрос для поиска.</label>
                 <input class="popover-search-input field" type="text" name="search" placeholder="Поиск по сайту" id="search">
@@ -81,8 +81,8 @@
               </svg>
               Вход
             </button>
-            <div class="popover popover-login visually-hidden">
-              <h2 class="popover-login-header">Личный кабинет</h2>
+            <div class="popover popover-login">
+              <p class="popover-login-header">Личный кабинет</p>
               <form action="https://echo.htmlacademy.ru/courses" method="post">
                 <ul class="popover-login-inputs-list">
                   <li class="popover-login-input-item">
@@ -111,16 +111,16 @@
               </svg>
               2 товара
             </button>
-            <div class="popover popover-cart visually-hidden">
-                <h2 class="popover-title">Корзина</h2>
+            <div class="popover popover-cart">
+                <p class="popover-title">Корзина</p>
                 <ul class="popover-cart-items">
                   <li class="popover-cart-item">
                     <img class="popover-cart-item-image" src="./images/icecreams/raspberry.jpg" alt="Малиновое мороженное." width="46" height="46">
                     <div class="item-description-wrapper">
-                      <h3 class="popover-cart-item-header">Малинка</h3>
+                      <p class="popover-cart-item-header">Малинка</p>
                       <p class="popover-cart-item-subheader">1 кг х 310 ₽</p>
                     </div>
-                    <p class="popover-cart-item-price">310 ₽</p>
+                    <p class="popover-cart-item-price">310 ₽&nbsp;</p>
                     <button class="popover-button-remove" type="button">
                       <span class="visually-hidden">Удалить элемент из корзины.</span>
                     </button>
@@ -128,10 +128,10 @@
                   <li class="popover-cart-item">
                     <img class="popover-cart-item-image" src="./images/icecreams/bubblegum.jpg" alt="Мороженое с жвачкой." width="46" height="46">
                     <div class="item-description-wrapper">
-                      <h3 class="popover-cart-item-header">Бабл-гам</h3>
+                      <p class="popover-cart-item-header">Бабл-гам</p>
                       <p class="popover-cart-item-subheader">1,5 кг х 320 ₽</p>
                     </div>
-                    <p class="popover-cart-item-price">480 ₽</p>
+                    <p class="popover-cart-item-price">480 ₽&nbsp;</p>
                     <button class="popover-button-remove" type="button">
                       <span class="visually-hidden">Удалить элемент из корзины.</span>
                     </button>
@@ -146,7 +146,7 @@
             </div>
 
             <div class="popover popover-cart-empty visually-hidden">
-              <h2 class="popover-title-empty">Ваша корзина пока <br>пуста</h2>
+              <p class="popover-title-empty">Ваша корзина пока <br>пуста</p>
             </div>
           </li>
         </ul>
