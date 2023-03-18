@@ -259,8 +259,12 @@ body .yellow {
     padding: 6px 6px;
 }
 
-.main-header-phone:hover, .main-header-phone:focus, .main-header-phone:active {
+.main-header-phone:hover {
     padding: 6px 6px;
+}
+
+.main-header-phone:focus, .main-header-phone:active {
+    padding: 4px 4px;
 }
 
 .main-header-search-button-icon {
@@ -2176,7 +2180,6 @@ body .yellow {
 .popover-login {
     width: 420px;
     min-height: 350px;
-    /* display: none; */
 }
 
 .popover-login-header {
@@ -2243,16 +2246,7 @@ body .yellow {
     width: 356px;
     min-height: 96px;
     padding: 24px 16px;
-    /* display: none; */
 }
-
-/* .popover-cart {
-    display: none;
-} */
-
-/* .navigation-item:focus-within .popover-search,  .navigation-item:focus-within .popover-login, .navigation-item:focus-within .popover-cart{
-    display: block;
-} */
 
 .popover-search-input {
     width: 100%;
@@ -2279,12 +2273,7 @@ body .yellow {
     width: 135px;
     min-height: 188px;
     padding: 0;
-    /* display: none; */
 }
-
-/* .main-header-link:focus-within .popover-catalog {
-    display: block;
-} */
 
 .catalog.active{
     background-color: #FF4A78;
@@ -2443,6 +2432,13 @@ body .yellow {
     font: inherit;
     color: inherit;
     resize: none;
+}
+
+.callback-comment-input:focus{
+    padding-top: 13px;
+    padding-right: 16px;
+    padding-bottom: 13px;
+    padding-left: 15px;
 }
 
 .modal-callback-button {
