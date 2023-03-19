@@ -57,7 +57,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    min-width: 100%;
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -65,7 +64,9 @@ body {
     font-size: 16px;
     color: #2D3440;
     background-color: #FEAFC3;
-  }
+
+    min-width: 1366px;
+}
 
 body .blue {
     background: #69A9FF;
@@ -408,6 +409,7 @@ body .yellow {
 }
 
 .main-promo-content {
+    width: 500px;
     padding-left: 70px;
     padding-top: 136px;
 }
@@ -651,9 +653,9 @@ body .yellow {
     border-radius: 8px;
     z-index: -1;
     position: absolute;
-    top: 15%;
+    top: 50px;
     width: 100%;
-    height: calc(100% - 15%);
+    height: calc(100% - 50px);
 }
 
 .main-purchasables-item {
@@ -672,6 +674,7 @@ body .yellow {
 }
 
 .main-purchasables-text-wrapper {
+    padding: 0 40px;
     margin: 11px 0 16px 0;
 }
 
@@ -684,7 +687,9 @@ body .yellow {
 }
 
 .main-purchasables-subheader {
+    width: 190px;
     text-align: center;
+    word-wrap: break-word;
     margin: 0;
 }
 
@@ -873,6 +878,8 @@ body .yellow {
     margin: 6px;
     padding: 26px;
     padding-bottom: 29px;
+
+    min-height: 212px;
 }
 
 .main-newsletter-text {
