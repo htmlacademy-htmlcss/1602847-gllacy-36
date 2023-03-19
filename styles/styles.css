@@ -674,6 +674,7 @@ body .yellow {
 }
 
 .main-purchasables-text-wrapper {
+    padding: 0 40px;
     margin: 11px 0 16px 0;
 }
 
@@ -686,7 +687,9 @@ body .yellow {
 }
 
 .main-purchasables-subheader {
+    width: 190px;
     text-align: center;
+    word-wrap: break-word;
     margin: 0;
 }
 
